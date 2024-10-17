@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./public/js/modal.js" defer></script>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <title>4</title>
+</head>
+
+<body>
+    <button id="#openModal">Открыть модальное окно</button>
+
+    <!-- Модальное окно -->
+    <div id="#myModal" class="modal">
+        <div class="modal-content">
+            <!-- Кнопка для закрытия -->
+            <span class="close">×</span>
+            <p>Ок, открыли, теперь закройте</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <p class="counter">0</p>
+    <div class="buttons">
+        <!-- Добавляем атрибут onclick который содержит функцию-обработчик для изменения текста счётчика -->
+        <button onclick="changeCounter('plus')" id="plusBtn">+</button>
+        <button onclick="changeCounter('reset')" id="resetBtn">Сбросить</button>
+        <button onclick="changeCounter('minus')" id="minusBtn">-</button>
+    </div>
+
+    <hr>
+
+    <button onclick="createHeadline()" id="createBtn">Создать заголовок</button>
+    <!-- Нужна кнопка, чтобы убирать все заголовки -->
+    <div class="wrapper">
+
+    </div>
+    <button class="delete__wrapper">
+        Удалить контент сверху
+    </button>
+    <script>
+        // Находим контейнер с классом .counter
+        const counter = document.querySelector('.counter');
+
+        const wrapper = document.querySelector('.wrapper');
+
+        // Функция для изменения текста внутри элемента-счётчика
+        function changeCounter(type) {
+            if (counter.innerHTML === 0 || counter) {
+                if (type === 'plus') {
+                    // Изменяем HTML внутри элемента (в данном случае лишь текст)
+                    counter.innerHTML++;
+                } else if (type === 'minus') {
+                    counter.innerHTML--;
+                } else if (type === 'reset') {
+                    counter.innerHTML = 0;
+                }
+            }
+        }
+
+        // Находим элемент с id #resetBtn
+        const resetButton = document.querySelector('#resetBtn');
+
+        // Пишем обработчик событий (если навестись курсором на элемент)
+        resetButton.addEventListener('mouseenter', () => {
+            // Изменяем стиль элемента (ширину)
+            resetButton.style.width = '100rem';
+            console.log('Размер элемента увеличился');
+            console.log(wrapper);
+        });
+
+        // Пишем обработчик событий (если убрать курсор от элемента)
+        resetButton.onmouseleave = () => {
+            // Изменяем стиль элемента (ширину)
+            resetButton.style.width = 'auto';
+        }
+
+        // Находим контейнер с классом .wrapper
+        
+
+        function createHeadline() {
+            // Создаём заголовок
+            const headline = document.createElement('h1');
+
+            // Добавляем текст новому элементу
+            headline.innerHTML = 'Hello world!!!';
+            // Добавляем класс новому элементу
+            headline.classList.add('red');
+
+            // Вставляем элемент контейнер
+            wrapper.append(headline);
+        }
+    
+        function deleteWrapper() {
+            const container = document.querySelector('.delete__wrapper');
+
+
+            container.addEventListener('click', () => {
+                wrapper.innerHTML = null;
+            });
+        }
+
+        deleteWrapper();
+    </script>
+    <script src="assets/js/modal.js"></script>
+</body>
+
+</html>

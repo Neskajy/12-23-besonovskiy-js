@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="./public/js/modal.js" defer></script> -->
+  <link rel="stylesheet" href="./public/css/style.css">
+  <title>5</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="#productForm" onsubmit="createProduct(event)">
+      <h2>Создать продукт</h2>
+      <div class="input_container">
+        <label>Название</label>
+        <input type="text" name="title" placeholder="Название">
+      </div>
+      <div class="input_container">
+        <label>Цена</label>
+        <input type="text" name="price" placeholder="Цена">
+      </div>
+      <div class="input_container">
+        <label>Описание</label>
+        <input type="text" name="description" placeholder="Описание">
+      </div>
+      <button type="submit">
+        Создать продукт
+      </button>
+    </form>
+  </div>
+  <script>
+    const productForm = document.getElementById('#productForm');
+    async function createProduct(event) {
+      console.log('Preparing data...');
+      try {
+        const call = await fetch('https://fakestoreapi.com/products/', {
+          method: "Post",
+          body: JSON.stringify(
+            {
+              title: productForm[name="title"].value,
+              price: productForm[name="price"].value,
+              description: productForm[name="description"].value,
+              image: 'https://i.pravatar.cc',
+              category: 'electronic'
+            }
+          )
+        });
+        const response = await call.json();
+      } catch(error) {
+        alert('🚨 Ошибка: ', error);
+        return;
+      }
+      console.log(await response);
+    }
+
+
+
+  </script>
+</body>
+
+</html>

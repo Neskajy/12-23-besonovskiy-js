@@ -1,0 +1,28 @@
+@import url(./modal.css);
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.red {
+    color: red;
+}
+
+#createBtn {
+    margin-top: 1rem;
+}
+
+.delete__wrapper {
+    margin-top: 30px;
+}
