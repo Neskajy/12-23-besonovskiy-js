@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}/*# sourceMappingURL=style.css.map */
