@@ -1,0 +1,13 @@
+.container {
+    width: 1200px !important;
+}
+
+.container--full {
+    width: 100%;
+}
+
+@media (width <= 1300px) {
+    .container {
+        width: 90% !important;
+    }
+}

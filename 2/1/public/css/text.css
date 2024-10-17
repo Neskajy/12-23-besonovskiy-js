@@ -1,0 +1,21 @@
+* {
+    font-family: 'Inter';
+}
+
+h1, h2, p, span {
+    color: white;
+    font-family: 'Inter';
+}
+
+a {
+    color: #0963eb;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}

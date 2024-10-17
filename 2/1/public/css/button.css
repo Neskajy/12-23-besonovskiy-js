@@ -1,0 +1,54 @@
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button.delete__profile {
+    width: 180px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(213, 43, 43);
+    transition: .6s ease-in-out all;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    &:hover {
+        background: rgb(243, 7, 7);
+        transition: .6s ease-in-out all;
+    }
+    &:active {
+        background: rgb(186, 0, 0);
+        transition: .2s ease-in-out;
+    }
+    /* &:focus {
+        outline: .5px solid rgb(255, 255, 255);
+        transition: .2 ease-in-out;
+    } */
+}
+
+.button.burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+    height: 40px;
+    position: relative;
+    border-radius: 10px;
+    background: #0963eb;
+    transition: .6s ease-in-out;
+    &:hover {
+        background: #005ae1;
+        transition: .6s ease-in-out;
+    }
+    &:active {
+        background: #004bbb;
+        transition: .2s ease-in-out;
+    }
+}
