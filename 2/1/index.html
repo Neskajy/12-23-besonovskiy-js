@@ -20,7 +20,7 @@
         </div>
     </header>
     <main class="profile">
-        <div class="modal__burger">
+        <div class="menu__burger">
             <div class="container">
                 <ul>
                     <li>
@@ -65,6 +65,22 @@
             </div>
         </div>
     </main>
-    <script src="public/js/index.js"></script>
+    <div class="my-modal">
+        <div class="container__modal">
+            <h3>Delete account forever?</h3>
+            <img src="public/imagesicons/icons/close.svg" alt="" class="close__modal">
+            <div class="btns">
+                <button class="cancel">
+                    <span>Cancel</span>
+                </button>
+                <button class="delete">
+                    <span>Delete</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modalWhenActive"></div>
+    <script src="public/js/burger.js"></script>
+    <script src="public/js/modal.js"></script>
 </body>
 </html>

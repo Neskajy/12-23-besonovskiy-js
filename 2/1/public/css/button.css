@@ -11,13 +11,14 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(213, 43, 43);
+    background: var(--red__main);
     transition: .6s ease-in-out all;
     .wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 5px;
+        font-weight: 700;
     }
     &:hover {
         background: rgb(243, 7, 7);
@@ -41,7 +42,7 @@ button {
     height: 40px;
     position: relative;
     border-radius: 10px;
-    background: #0963eb;
+    background: var(--blue__main);
     transition: .6s ease-in-out;
     &:hover {
         background: #005ae1;
@@ -51,4 +52,24 @@ button {
         background: #004bbb;
         transition: .2s ease-in-out;
     }
+}
+
+.cancel, .delete {
+    width: 85px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        font-weight: 700;
+    }
+}
+
+.cancel {
+    background: var(--blue__main);
+}
+
+.delete {
+    background: var(--red__main);
 }

@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@import url(./modal.css);
+@import url(./burger.css);
 @import url(./button.css);
 @import url(./profile.css);
 @import url(./text.css);
 @import url(./container.css);
 @import url(./header.css);
+@import url(./modal.css);
+
+:root {
+    --red__main: rgb(213, 43, 43);
+    --blue__main: #0963eb;
+}
 
 *,
 *::after,

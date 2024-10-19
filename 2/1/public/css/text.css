@@ -2,7 +2,7 @@
     font-family: 'Inter';
 }
 
-h1, h2, p, span {
+h1, h2, h3, p, span {
     color: white;
     font-family: 'Inter';
 }
@@ -18,4 +18,8 @@ h1 {
 
 h2 {
     font-size: 32px;
+}
+
+h3 {
+
 }
