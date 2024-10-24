@@ -33,6 +33,7 @@
   <script>
     const productForm = document.getElementById('#productForm');
     async function createProduct(event) {
+      event.preventDefault();
       console.log('Preparing data...');
       try {
         const call = await fetch('https://fakestoreapi.com/products/', {
