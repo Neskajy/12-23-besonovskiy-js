@@ -1,0 +1,71 @@
+:root {
+    --pannel-width: 5rem;
+}
+
+.pannel {
+    background: var(--black__ui1);
+    left: 0;
+    top: 0;
+    /* max-width: var(--pannel-width); */
+    /* min-width: var(--pannel-width); */
+    /* width: fit-content; */
+    padding: 0px 15px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: var(--z-index__pannel);
+    gap: 1rem;
+    ul {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        .retractable {
+            width: 50px;
+            transition: width 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            border-radius: 8px;
+            /* aspect-ratio: 1 / 1; */
+            /* width: fit-content; */
+            padding: 15px;
+            background: var(--black__ui2);
+            position: relative;
+            overflow: hidden;
+            transition: .3 ease-in-out;
+
+            img {
+                width: 20px;
+            }
+            &.current {
+                background: var(--black__ui3);
+            }
+            span {
+                position: absolute;
+                left: 3.5rem;                
+            }
+            &.active {
+                width: 12rem;
+            }
+        }
+        .logo {
+            background: none;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            img {
+                width: 50px;
+            }
+        }
+    }
+    &.active {
+        /* min-width: 10rem; */
+        transition: .3s ease-in-out;
+    }
+}

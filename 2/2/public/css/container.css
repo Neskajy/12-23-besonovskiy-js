@@ -1,0 +1,16 @@
+.container {
+    width: 1200px;
+}
+
+.container.full {
+    width: calc(100% - var(--pannel-width));
+    position: relative;
+    left: var(--pannel-width);
+    padding: 0px 30px;
+}
+
+@media (width <= 1300px) {
+    .container {
+        width: calc(90% - var(--pannel-width));
+    }
+}

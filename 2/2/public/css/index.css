@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url(./burger.css);
+@import url(./button.css);
+@import url(./pages/profile.css);
+@import url(./text.css);
+@import url(./container.css);
+@import url(./header.css);
+@import url(./modal.css);
+@import url(./pannel.css);
+
+:root {
+    --red__main: rgb(213, 43, 43);
+    --blue__main: #0963eb;
+    --black__ui4: #0b0b0b;
+    --black__ui1: #101010;
+    --black__ui2: #272727;
+    --black__ui3: #343434;
+    --header__height: 5rem;
+    /* --accordion__height: 250px; */
+
+    --z-index__pannel: 20;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--black__ui4);
+    overflow-x: hidden;
+}
+
+html {
+    /* scrollbar-zindex: 1000; */
+}
+
+body {
+    display: flex;
+}
+
+.info {
+    width: 100%;
+}

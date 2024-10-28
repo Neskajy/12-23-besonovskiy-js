@@ -1,0 +1,76 @@
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button.delete__profile {
+    width: 180px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--red__main);
+    transition: .6s ease-in-out all;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-weight: 700;
+    }
+    &:hover {
+        background: rgb(243, 7, 7);
+        transition: .6s ease-in-out all;
+    }
+    &:active {
+        background: rgb(186, 0, 0);
+        transition: .2s ease-in-out;
+    }
+    /* &:focus {
+        outline: .5px solid rgb(255, 255, 255);
+        transition: .2 ease-in-out;
+    } */
+}
+
+.button.burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+    height: 40px;
+    position: relative;
+    border-radius: 10px;
+    /* background: var(--blue__main); */
+    background: #202020;
+    transition: .6s ease-in-out;
+    &:hover {
+        background: #2c2c2c;
+        transition: .6s ease-in-out;
+    }
+    &:active {
+        background: #363636;
+        transition: .2s ease-in-out;
+    }
+}
+
+.cancel, .delete {
+    width: 85px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        font-weight: 700;
+    }
+}
+
+.cancel {
+    background: var(--blue__main);
+}
+
+.delete {
+    background: var(--red__main);
+}
