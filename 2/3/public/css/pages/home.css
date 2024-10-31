@@ -1,0 +1,95 @@
+.home {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+
+    gap: 40px;
+    .home__info {
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            .banner {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                h1 {
+                    white-space: nowrap;
+                }
+                img {
+                    width: 80%;
+                }
+            }
+            .about__us {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+.accordion {
+    width: 50%;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    height: 45px;
+    position: relative;
+    /* background: var(--black__ui1); */
+    .title {
+        cursor: pointer;
+        height: 45px;
+        border-radius: 10px;
+        padding: 12px 20px;
+        position: relative;
+        transition: .3s ease-in-out;
+        .expand__accordion {
+            user-select: none;
+            position: absolute;
+            top: 50%;
+            aspect-ratio: 1 / 1;
+            height: 24px;
+            transform: translateY(-50%);
+            right: 20px;
+            transition: .3s ease-in-out;
+            &.active {
+                transform: translateY(-50%)
+                rotate(45deg);
+                transition: .3s ease-in-out;
+            }
+        }
+        &:hover {
+            background: var(--black__ui1);
+            transition: .3s ease-in-out;
+        }
+        &.active {
+            background: var(--black__ui1);
+            transition: .3s ease-in-out;
+        }
+    }
+    .information {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        padding-left: 20px;
+        transition: .8s ease-in-out;
+        .element {
+            display: flex;
+            gap: 3px;
+            flex-direction: column;
+        }
+        &.active {
+            transition: .8s ease-in-out;
+            opacity: 1;
+        }
+    }
+    &.active {
+        transition: .3s ease-in-out;
+    }
+}
