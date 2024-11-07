@@ -1,0 +1,28 @@
+.annoying__modal {
+    display: none;
+    &.active {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        .modal {
+            background: var(--black__ui1);
+            padding: 40px 30px;
+            outline: .8px solid var(--blue__main);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .cancel {
+            }
+        }
+    }
+}

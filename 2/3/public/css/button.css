@@ -56,12 +56,13 @@ button {
 }
 
 .cancel, .delete {
-    width: 85px;
-    height: 32px;
+    width: 105px;
+    height: 42px;
     border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3px;
     span {
         font-weight: 700;
     }

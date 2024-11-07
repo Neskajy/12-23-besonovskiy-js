@@ -8,6 +8,7 @@
 @import url(./header.css);
 @import url(./modal.css);
 @import url(./pannel.css);
+@import url(./footer.css);
 
 :root {
     --red__main: rgb(213, 43, 43);
@@ -30,6 +31,10 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+* {
+    /* outline: 1px solid red; */
 }
 
 html,
